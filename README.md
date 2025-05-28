@@ -30,6 +30,9 @@ Convert integers into:
   - Outputs RGB and HEX values in a clean, tabular format
   - Uses logicmagix shared prompt handler for consistent UX
   - Works as a standalone CLI script *or* editable live in IPython/XTide86
+
+## Installation
+Simple clone the repo or extract the zip and run ./installer.sh to use NPalette standalone or within [`XTide86`](https://github.com/logicmagix/XTide86)
         
 
 ## Screenshots
