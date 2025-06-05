@@ -8,7 +8,7 @@ See the [LICENSE](./LICENSE) file for full details.
 **A color swatch visualization tool for you terminal**  
 A color swatch visualization tool for your terminal
 
-Part of the [XTide86](https://github.com/logicmagix/XTide86) ecosystem — a modular terminal IDE for command-line enthusiasts.
+Part of the [Tide42](https://github.com/logicmagix/Tide42) ecosystem — a modular terminal IDE for command-line enthusiasts.
 
 ## About NPalette
 
@@ -29,10 +29,10 @@ Convert integers into:
   - ANSI-rendered color swatch
   - Outputs RGB and HEX values in a clean, tabular format
   - Uses logicmagix shared prompt handler for consistent UX
-  - Works as a standalone CLI script *or* editable live in IPython/XTide86
+  - Works as a standalone CLI script *or* editable live in IPython/Tide42
 
 ## Installation
-Simple clone the repo or extract the zip and run ./installer.sh to use NPalette standalone or within [`XTide86`](https://github.com/logicmagix/XTide86)
+Simple clone the repo or extract the zip and run ./installer.sh to use NPalette standalone or within [`Tide42`](https://github.com/logicmagix/Tide42)
         
 
 ## Screenshots
