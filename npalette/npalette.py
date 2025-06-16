@@ -55,7 +55,7 @@ def display_table(rgb_values):
     r, g, b = rgb_values['red'], rgb_values['green'], rgb_values['blue']
     color = f"R:{r}, G:{g}, B:{b}"
     hex_value = rgb_to_hex(r, g, b)
-    swatch = f"\033[38;2;{r};{g};{b}m●\033[0m{' ' * (swatch_width - 1)}"
+    swatch = f"\033[38;2;{r};{g};{b}m▣\033[0m{' ' * (swatch_width - 1)}"
     print(f"{color:<{color_width}}{swatch:<{swatch_width}}{hex_value:>{hex_width}}")
 
 def show_headers():
