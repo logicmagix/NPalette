@@ -67,15 +67,47 @@ def show_headers():
 
 def main():
     show_headers()
-    red = get_value(prompt="Enter a Red value:\t", lower=0-1, upper=255+1, convert_type=int)
-    green = get_value(prompt="Enter a Green value:\t", lower=0-1, upper=255+1, convert_type=int)
-    blue = get_value(prompt="Enter a Blue value:\t", lower=0-1, upper=255+1, convert_type=int)
-    rgb_values = {
-        "red": red,
-        "green": green,
-        "blue": blue,
-    }
-    display_table(rgb_values)
+    while True:
+        # helper to read one channel with 'q' to quit
+        def read_channel(name: str) -> int:
+            while True:
+                raw = get_value(
+                    prompt=f"Enter a {name} value (0–255) or 'q' to quit:\t",
+                    convert_type=str
+                ).strip().lower()
+
+                if raw == "q":
+                    print("Goodbye!")
+                    raise SystemExit
+
+                # try to parse int and range-check
+                try:
+                    val = int(raw)
+                except ValueError:
+                    print("Error: please enter an integer (0–255) or 'q' to quit.")
+                    continue
+
+                if 0 <= val <= 255:
+                    return val
+                else:
+                    print("Out of range: expected 0–255.")
+
+        # collect RGB
+        r = read_channel("Red")
+        g = read_channel("Green")
+        b = read_channel("Blue")
+
+        rgb_values = {"red": r, "green": g, "blue": b}
+        display_table(rgb_values)
+
+        # allow another round or quit
+        again = get_value(
+            prompt="Press Enter for another swatch, or type 'q' to quit:\t",
+            convert_type=str
+        ).strip().lower()
+        if again == "q":
+            print("Goodbye!")
+            break
 
 if __name__ == "__main__":
     main()
